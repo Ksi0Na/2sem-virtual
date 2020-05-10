@@ -6,6 +6,6 @@ Stationery::Stationery(unsigned id, unsigned count,
     , _maker(maker)
 {}
 
-string Stationery::maker() const { return _maker; }
+string Stationery::maker() { return _maker; }
 
-string Stationery::type() const { return "Stationery "; }
+string Stationery::type() { return "Stationery "; }

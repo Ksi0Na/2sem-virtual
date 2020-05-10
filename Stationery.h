@@ -1,6 +1,7 @@
 #ifndef STATIONERY_H
 #define STATIONERY_H
 
+//class Product;
 #include "Product.h"
 #include <string>
 
@@ -11,10 +12,10 @@ public:
     Stationery(unsigned id, unsigned count,
                string maker);
 
-    string maker() const;
+    string maker();
 
-    virtual string type() const = 0;
-    virtual string info() const = 0;
+    virtual string type();
+    virtual string info();
 
 private:
     string _maker;

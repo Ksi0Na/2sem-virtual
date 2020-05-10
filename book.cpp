@@ -1,9 +1,8 @@
 #include "book.h"
-#include <sstream>
 
-Book::Book(unsigned id, unsigned count,
-           string name, string author, string publisher,
-           unsigned short year, unsigned short publication_year)
+Book::Book(unsigned id, unsigned count, string name, 
+           string author, unsigned short year, 
+           string publisher, unsigned short publication_year)
     :Product(id, count)
     , _name(name)
     , _author(author)
@@ -12,18 +11,18 @@ Book::Book(unsigned id, unsigned count,
     , _publication_year(publication_year)
 {}
 
-string Book::type() const { return "Book"; }
+string Book::type() { return "Book"; }
 
-string Book::info() const
+string Book::info()
 {
     stringstream ss;
-    ss << "Name: "             << _name             << endl
-       << "Author: "           << _author           << endl
-       << "Year: "             << _year             << endl
-       << "Publisher: "        << _publisher        << endl
-       << "Publication year: " << _publication_year << endl
-       << "ID: "               << id()              << endl
-       << "Quantity: "         << count()           << endl
-       << endl;
+    ss << "Name: "                << _name                << endl
+       << "Author: "               << _author               << endl
+       << "Year: "                  << _year                   << endl
+       << "Publisher: "           << _publisher            << endl
+       << "Publication year: " << _publication_year  << endl
+       << "ID: "                     << id()                      << endl
+       << "Quantity: "            << count()                 << endl
+                                                                           << endl;
     return ss.str();
 }

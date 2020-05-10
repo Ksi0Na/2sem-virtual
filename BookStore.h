@@ -1,8 +1,14 @@
 #ifndef BOOKSTORE_H
 #define BOOKSTORE_H
 
-#include <vector>
+class Product;
+class Book;
+class Pen;
 #include "Product.h"
+#include "book.h"
+#include "pen.h"
+#include <iostream>
+#include <vector>
 
 using namespace std;
 class BookStore
@@ -10,12 +16,12 @@ class BookStore
 public:
     BookStore();
 
-    void dump() const;
+    void dump();
 
-    ~BookStore();
+    virtual ~BookStore();
 
 private:
-    vector<Product *> _products;
+    vector <Product *> _products;
 };
 
 #endif // BOOKSTORE_H

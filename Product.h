@@ -1,6 +1,7 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
 
+//class BookStore;
 #include"BookStore.h"
 #include <string>
 
@@ -10,13 +11,13 @@ class Product: public BookStore
 public:
     Product (unsigned id, unsigned count);
 
-    unsigned id() const;
+    unsigned id();
 
-    unsigned count() const;
+    unsigned count();
     void set_count(unsigned count);
 
-    virtual string type() const = 0;
-    virtual string info() const = 0;
+    virtual string type();
+    virtual string info();
 
 private:
     unsigned _id;

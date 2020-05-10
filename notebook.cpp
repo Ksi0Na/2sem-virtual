@@ -1,5 +1,4 @@
 #include "notebook.h"
-#include <sstream>
 
 Notebook::Notebook(unsigned id,  unsigned count,
                    string maker, string type_notebook,
@@ -9,9 +8,9 @@ Notebook::Notebook(unsigned id,  unsigned count,
     , _count_sheets(count_sheets)
 {}
 
-string Notebook::type() const  { return "Notebook "; }
+string Notebook::type()  { return "Notebook "; }
 
-string Notebook::info() const
+string Notebook::info()
 {
     stringstream ss;
     ss << "Color: "               << _type_notebook << endl

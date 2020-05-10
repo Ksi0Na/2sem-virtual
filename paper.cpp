@@ -1,5 +1,4 @@
 #include "paper.h"
-#include <sstream>
 
 Paper::Paper(unsigned id, unsigned count,
              string maker, string size, string Ro)
@@ -8,9 +7,9 @@ Paper::Paper(unsigned id, unsigned count,
     , _Ro(Ro)
 {}
 
-string Paper::type() const { return "Paper "; }
+string Paper::type() { return "Paper "; }
 
-string Paper::info() const
+string Paper::info()
 {
     stringstream ss;
     ss << "Size: "     << _size   << endl

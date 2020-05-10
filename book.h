@@ -1,17 +1,21 @@
 #ifndef BOOK_H
 #define BOOK_H
 
+//class Product;
 #include "Product.h"
+#include <sstream>
+#include <string>
+using namespace std;
 
 class Book : public Product
 {
 public:
-    Book(unsigned id, unsigned count,
-         string name, string author, string publisher,
-         unsigned short year, unsigned short publication_year);
+    Book(unsigned id, unsigned count, string name, 
+             string author, unsigned short year, 
+             string publisher, unsigned short publication_year);
 
-    virtual string type() const = 0;
-    virtual string info() const = 0;
+    virtual string type();
+    virtual string info();
 
 private:
     string _name, _author, _publisher;
